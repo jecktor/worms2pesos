@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbb5lx17ya0x6"]
+
+[ext_resource type="Script" path="res://components/GravityComponent/GravityComponent.cs" id="1_k3kai"]
+
+[node name="GravityComponent" type="Node"]
+script = ExtResource("1_k3kai")

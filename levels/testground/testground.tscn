@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://5xrnm43p8e1u"]
+
+[ext_resource type="PackedScene" uid="uid://igrqpwn0wnl6" path="res://entities/worm/Worm.tscn" id="1_habtu"]
+
+[node name="testground" type="Node2D"]
+
+[node name="terrain" type="StaticBody2D" parent="."]
+position = Vector2(960, 1080)
+
+[node name="Polygon2D" type="Polygon2D" parent="terrain"]
+polygon = PackedVector2Array(-960, 0, -960, -184, -864, -128, -640, -216, -528, -168, -128, -168, 184, -368, 432, -200, 592, -424, 720, -200, 960, -200, 960, 0)
+
+[node name="collision" type="CollisionPolygon2D" parent="terrain"]
+polygon = PackedVector2Array(-960, 0, -960, -184, -864, -128, -640, -216, -528, -168, -128, -168, 184, -368, 432, -200, 592, -424, 720, -200, 960, -200, 960, 0)
+
+[node name="Worm" parent="." instance=ExtResource("1_habtu")]
+position = Vector2(632, 912)

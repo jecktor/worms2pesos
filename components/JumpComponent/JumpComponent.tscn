@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dku8dkt21dpci"]
+
+[ext_resource type="Script" path="res://components/JumpComponent/JumpComponent.cs" id="1_n2bru"]
+
+[node name="JumpComponent" type="Node"]
+script = ExtResource("1_n2bru")
+
+[node name="JumpTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="JumpTimer" to="." method="OnJumpTimerTimeout"]
