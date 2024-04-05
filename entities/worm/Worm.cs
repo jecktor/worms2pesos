@@ -51,7 +51,7 @@ namespace Entity
 			if (Input.IsActionJustPressed("jump"))
 				jumpComponent.Jump();
 
-			if (Input.IsActionJustPressed("ui_focus_next"))
+			if (!jumpComponent.IsJumping && Input.IsActionJustPressed("ui_focus_next"))
 			{
 				if (crosshair.Aiming)
 					Holster();
